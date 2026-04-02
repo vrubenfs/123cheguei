@@ -36,7 +36,7 @@ export default function Services() {
                     {s.icon}
                   </div>
                   <h3 className="mt-5 text-base font-bold text-primary">{data.title}</h3>
-                  <p className="mt-2 text-sm text-foreground/40 leading-relaxed">{data.description}</p>
+                  <p className="mt-2 text-sm text-foreground/55 leading-relaxed">{data.description}</p>
                 </HoverCard>
               </StaggerItem>
             );

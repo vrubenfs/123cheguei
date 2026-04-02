@@ -30,7 +30,7 @@ export default function HowItWorks() {
                 </div>
                 <div className="text-xs font-black tracking-[0.3em] text-accent uppercase mb-2">{locale === "pt" ? "Passo" : "Step"} {i + 1}</div>
                 <h3 className="text-lg font-bold text-primary mb-2">{step.title}</h3>
-                <p className="text-sm text-foreground/40 leading-relaxed max-w-[260px] mx-auto">{step.description}</p>
+                <p className="text-sm text-foreground/55 leading-relaxed max-w-[260px] mx-auto">{step.description}</p>
               </div>
             </StaggerItem>
           ))}

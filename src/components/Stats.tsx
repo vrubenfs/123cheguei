@@ -44,7 +44,7 @@ export default function Stats() {
             <div className="text-center relative">
               {i > 0 && <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-10 bg-white/10" />}
               <div className="text-4xl sm:text-5xl font-black text-white"><Counter target={s.n} suffix={s.s} /></div>
-              <div className="mt-1 text-xs font-semibold tracking-widest uppercase text-white/30">{s.l}</div>
+              <div className="mt-1 text-xs font-semibold tracking-widest uppercase text-white/50">{s.l}</div>
             </div>
           </StaggerItem>
         ))}

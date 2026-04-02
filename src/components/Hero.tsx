@@ -13,10 +13,12 @@ export default function Hero() {
     const fd = new FormData(e.currentTarget);
     const data = {
       name: fd.get("name") as string,
-      email: "", // not collected in quick form
+      email: fd.get("email") as string || "",
       phone: fd.get("phone") as string,
       from: fd.get("from") as string,
       to: fd.get("to") as string,
+      date: fd.get("date") as string || "",
+      website: fd.get("website") as string || "",
     };
     try {
       const res = await fetch("/api/contact", {
@@ -38,7 +40,7 @@ export default function Hero() {
       <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-sky/[0.06] rounded-full blur-[100px]" />
 
       {/* Europe map outline with Portugal highlighted */}
-      <div className="absolute right-[-5%] top-[5%] w-[600px] h-[600px] opacity-[0.04] pointer-events-none hidden lg:block">
+      <div className="absolute right-[-15%] sm:right-[-5%] top-[5%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] opacity-[0.06] pointer-events-none">
         <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
           {/* Simplified Europe outline */}
           {/* Scandinavia */}
@@ -87,7 +89,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg text-white/40 max-w-md leading-relaxed">{t.hero.subtitle}</p>
+            <p className="mt-6 text-base sm:text-lg text-white/60 max-w-md leading-relaxed">{t.hero.subtitle}</p>
 
             <div className="mt-8 flex items-center gap-3">
               <a href="tel:932844460" className="inline-flex items-center gap-3 text-white/60 hover:text-white font-medium text-base py-3 transition-colors">
@@ -111,7 +113,7 @@ export default function Hero() {
                 <span className="text-white/60 text-sm font-medium ml-1">4.9/5</span>
               </div>
               <div className="h-4 w-px bg-white/10" />
-              <span className="text-white/40 text-sm">500+ {locale === "pt" ? "mudanças realizadas" : "moves completed"}</span>
+              <span className="text-white/60 text-sm">500+ {locale === "pt" ? "mudanças realizadas" : "moves completed"}</span>
             </div>
           </div>
 
@@ -135,15 +137,22 @@ export default function Hero() {
             ) : (
               <>
                 <h3 className="text-xl font-bold text-primary mt-2 mb-6">{locale === "pt" ? "Peça já o seu orçamento" : "Get your quote now"}</h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Honeypot — hidden from humans, bots fill it */}
+                <form onSubmit={handleSubmit} className="space-y-3">
                   <input type="text" name="website" className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" />
                   <input type="text" name="name" required placeholder={locale === "pt" ? "Nome *" : "Name *"} className={inp} />
-                  <input type="tel" name="phone" required placeholder={locale === "pt" ? "Telefone *" : "Phone *"} className={inp} />
+                  <div className="grid grid-cols-2 gap-3">
+                    <input type="tel" name="phone" required placeholder={locale === "pt" ? "Telefone *" : "Phone *"} className={inp} />
+                    <input type="email" name="email" placeholder="Email" className={inp} />
+                  </div>
                   <div className="grid grid-cols-2 gap-3">
                     <input type="text" name="from" required placeholder={locale === "pt" ? "De (cidade) *" : "From (city) *"} className={inp} />
                     <input type="text" name="to" required placeholder={locale === "pt" ? "Para (cidade) *" : "To (city) *"} className={inp} />
                   </div>
+                  <input type="date" name="date" className={`${inp} text-gray-400`} />
+                  <label className="flex items-start gap-2 text-xs text-gray-400 cursor-pointer">
+                    <input type="checkbox" name="gdpr" required className="mt-0.5 accent-accent" />
+                    <span>{locale === "pt" ? "Aceito a recolha dos meus dados para resposta ao pedido de orçamento." : "I consent to data collection to respond to my quote request."}</span>
+                  </label>
                   <button
                     type="submit"
                     disabled={status === "sending"}

@@ -19,22 +19,22 @@ export const translations = {
       residential: {
         title: "Mudanças Residenciais",
         description:
-          "Mudanças de apartamentos e moradias com cuidado e profissionalismo. De T0 a T5+, tratamos de tudo.",
+          "De T0 a T5+, com seguro incluído. Protegemos cada móvel com mantas e filme stretch. Elevador de móveis disponível para andares sem elevador.",
       },
       packing: {
         title: "Embalagem e Proteção",
         description:
-          "Embalamos os seus pertences com materiais de qualidade para garantir que tudo chega em perfeitas condições.",
+          "Caixas reforçadas, papel bolha e proteção especial para frágeis. Embalamos tudo — ou fornecemos os materiais para embalar você mesmo.",
       },
       assembly: {
         title: "Montagem e Desmontagem",
         description:
-          "Desmontamos e montamos os seus móveis no destino. Rápido, eficiente e sem danos.",
+          "Equipa experiente desmonta e monta IKEA, cozinhas e roupeiros. Ferramentas profissionais, sem danos nas peças.",
       },
       transport: {
         title: "Transporte Nacional e Europeu",
         description:
-          "Transporte seguro para qualquer destino em Portugal e Europa. Cobertura total com veículos adequados.",
+          "Portugal continental, Espanha, França, Alemanha, Suíça e mais. Veículos de 20m³ a 40m³ com GPS e seguro de carga.",
       },
     },
     howItWorks: {
@@ -104,22 +104,22 @@ export const translations = {
       residential: {
         title: "Household Moves",
         description:
-          "Apartment and house moves with care and professionalism. From studios to 5+ bedrooms, we handle it all.",
+          "Studios to 5+ bedrooms, insurance included. Every piece of furniture protected with blankets and stretch film. Furniture lifts available for walk-ups.",
       },
       packing: {
         title: "Packing & Protection",
         description:
-          "We pack your belongings with quality materials to ensure everything arrives in perfect condition.",
+          "Reinforced boxes, bubble wrap, and special protection for fragile items. We pack everything — or supply materials for you to self-pack.",
       },
       assembly: {
         title: "Assembly & Disassembly",
         description:
-          "We disassemble and reassemble your furniture at the destination. Fast, efficient, and damage-free.",
+          "Experienced team disassembles and reassembles IKEA, kitchens, and wardrobes. Professional tools, zero damage.",
       },
       transport: {
         title: "National & European Transport",
         description:
-          "Safe transport to any destination in Portugal and Europe. Full coverage with proper vehicles.",
+          "Mainland Portugal, Spain, France, Germany, Switzerland and more. 20m³ to 40m³ vehicles with GPS tracking and cargo insurance.",
       },
     },
     howItWorks: {

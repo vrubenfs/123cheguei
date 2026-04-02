@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import HowItWorks from "@/components/HowItWorks";
 import MoveRequestForm from "@/components/MoveRequestForm";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollEffects";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <Stats />
         <HowItWorks />
+        <FAQ />
         <MoveRequestForm />
       </main>
       <Footer />
