@@ -47,6 +47,8 @@ export default function MoveRequestForm() {
           {/* Form — slides from right */}
           <SlideIn from="right" delay={0.15}>
             <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-7 sm:p-10 shadow-2xl">
+              {/* Honeypot */}
+              <input type="text" name="website" className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="sm:col-span-2">
                   <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">{t.form.name} <span className="text-red">*</span></label>

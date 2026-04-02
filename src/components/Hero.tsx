@@ -102,6 +102,8 @@ export default function Hero() {
               <>
                 <h3 className="text-xl font-bold text-primary mt-2 mb-6">{locale === "pt" ? "Peça já o seu orçamento" : "Get your quote now"}</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Honeypot — hidden from humans, bots fill it */}
+                  <input type="text" name="website" className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" />
                   <input type="text" name="name" required placeholder={locale === "pt" ? "Nome *" : "Name *"} className={inp} />
                   <input type="tel" name="phone" required placeholder={locale === "pt" ? "Telefone *" : "Phone *"} className={inp} />
                   <div className="grid grid-cols-2 gap-3">
