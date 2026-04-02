@@ -37,6 +37,40 @@ export default function Hero() {
       <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-accent/[0.08] rounded-full blur-[120px]" />
       <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-sky/[0.06] rounded-full blur-[100px]" />
 
+      {/* Europe map outline with Portugal highlighted */}
+      <div className="absolute right-[-5%] top-[5%] w-[600px] h-[600px] opacity-[0.04] pointer-events-none hidden lg:block">
+        <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          {/* Simplified Europe outline */}
+          {/* Scandinavia */}
+          <path d="M250 40 L270 30 L280 60 L290 50 L300 70 L285 100 L275 90 L260 110 L250 80 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* UK & Ireland */}
+          <path d="M180 100 L195 90 L200 110 L210 105 L205 130 L190 135 L185 120 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          <path d="M165 105 L175 100 L178 115 L170 120 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* France */}
+          <path d="M210 140 L245 130 L260 150 L255 180 L240 200 L215 195 L200 175 L205 155 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Spain */}
+          <path d="M170 200 L240 200 L245 230 L240 260 L200 270 L170 260 L160 235 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Portugal — FILLED GREEN */}
+          <path d="M148 210 L168 205 L170 235 L168 260 L155 265 L145 250 L142 230 Z" stroke="#5A9E2F" strokeWidth="2.5" fill="#5A9E2F" fillOpacity="0.3" />
+          {/* Italy */}
+          <path d="M265 165 L275 160 L280 190 L290 210 L285 240 L275 250 L270 230 L265 200 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Germany/Central Europe */}
+          <path d="M245 100 L280 95 L290 110 L285 140 L265 150 L245 135 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Poland/Eastern */}
+          <path d="M290 90 L330 85 L340 110 L335 140 L310 145 L290 130 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Balkans */}
+          <path d="M300 150 L330 145 L340 170 L335 200 L315 210 L295 195 L290 170 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Greece */}
+          <path d="M310 215 L325 210 L330 235 L320 250 L310 240 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Turkey */}
+          <path d="M340 170 L390 165 L400 180 L385 195 L350 200 L340 190 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Baltic states */}
+          <path d="M300 65 L320 60 L325 80 L310 85 Z" stroke="white" strokeWidth="1.5" fill="none" />
+          {/* Finland */}
+          <path d="M300 20 L315 15 L320 45 L310 55 L300 50 Z" stroke="white" strokeWidth="1.5" fill="none" />
+        </svg>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: content */}
