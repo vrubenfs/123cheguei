@@ -15,79 +15,62 @@ export async function POST(request: Request) {
   try {
     const data: ContactFormData = await request.json();
 
-    // Validate required fields
     if (!data.name || !data.email || !data.phone || !data.from || !data.to) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Build email body
     const emailBody = `
-Novo Pedido de Orçamento - 123cheguei
-======================================
-
-Nome: ${data.name}
-Email: ${data.email}
-Telefone: ${data.phone}
-
-Morada de Origem: ${data.from}
-Morada de Destino: ${data.to}
-
-Data Pretendida: ${data.date || "Não especificada"}
-Tipologia: ${data.type || "Não especificada"}
-
-Observações:
-${data.notes || "Sem observações"}
-
-======================================
-Enviado através do website 123cheguei.pt
+<h2>Novo Pedido de Orçamento - 123cheguei</h2>
+<table style="font-family:Arial,sans-serif;font-size:14px;border-collapse:collapse;width:100%;max-width:500px;">
+  <tr><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Nome:</td><td style="padding:8px;">${data.name}</td></tr>
+  <tr style="background:#f8f9fa;"><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Email:</td><td style="padding:8px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
+  <tr><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Telefone:</td><td style="padding:8px;"><a href="tel:${data.phone}">${data.phone}</a></td></tr>
+  <tr style="background:#f8f9fa;"><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Origem:</td><td style="padding:8px;">${data.from}</td></tr>
+  <tr><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Destino:</td><td style="padding:8px;">${data.to}</td></tr>
+  <tr style="background:#f8f9fa;"><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Data:</td><td style="padding:8px;">${data.date || "Não especificada"}</td></tr>
+  <tr><td style="padding:8px;font-weight:bold;color:#1E3A5F;">Tipologia:</td><td style="padding:8px;">${data.type || "Não especificada"}</td></tr>
+</table>
+${data.notes ? `<p style="margin-top:16px;"><strong>Observações:</strong><br/>${data.notes}</p>` : ""}
+<hr style="margin-top:24px;border:none;border-top:1px solid #e5e7eb;"/>
+<p style="font-size:12px;color:#94a3b8;">Enviado através do website 123cheguei.pt</p>
     `.trim();
 
-    // Option 1: Using Resend (recommended - set RESEND_API_KEY env var)
-    const resendKey = process.env.RESEND_API_KEY;
+    const brevoKey = process.env.BREVO_API_KEY;
     const toEmail = process.env.CONTACT_EMAIL || "info@123cheguei.pt";
 
-    if (resendKey) {
-      const res = await fetch("https://api.resend.com/emails", {
+    if (brevoKey) {
+      const res = await fetch("https://api.brevo.com/v3/smtp/email", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${resendKey}`,
+          "api-key": brevoKey,
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          from: "123cheguei <noreply@123cheguei.pt>",
-          to: [toEmail],
-          reply_to: data.email,
-          subject: `Novo Orçamento: ${data.name} - ${data.from} → ${data.to}`,
-          text: emailBody,
+          sender: { name: "123cheguei Website", email: toEmail },
+          to: [{ email: toEmail, name: "123cheguei" }],
+          replyTo: { email: data.email, name: data.name },
+          subject: `Novo Orçamento: ${data.name} — ${data.from} → ${data.to}`,
+          htmlContent: emailBody,
         }),
       });
 
       if (!res.ok) {
-        console.error("Resend error:", await res.text());
-        return NextResponse.json(
-          { error: "Failed to send email" },
-          { status: 500 }
-        );
+        const err = await res.text();
+        console.error("Brevo error:", err);
+        return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
       }
     } else {
-      // Fallback: log to console when no email service is configured
       console.log("=== NEW MOVE REQUEST ===");
-      console.log(emailBody);
-      console.log("========================");
-      console.log(
-        "To enable email sending, set RESEND_API_KEY and CONTACT_EMAIL environment variables."
-      );
+      console.log(`Name: ${data.name} | Email: ${data.email} | Phone: ${data.phone}`);
+      console.log(`From: ${data.from} → To: ${data.to} | Date: ${data.date} | Type: ${data.type}`);
+      console.log(`Notes: ${data.notes || "none"}`);
+      console.log("Set BREVO_API_KEY env var to enable email sending.");
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
