@@ -7,6 +7,7 @@ import MoveRequestForm from "@/components/MoveRequestForm";
 import Footer from "@/components/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollEffects";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollTruck from "@/components/ScrollTruck";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <MoveRequestForm />
       </main>
       <Footer />
+      <ScrollTruck />
       <WhatsAppButton />
     </>
   );
