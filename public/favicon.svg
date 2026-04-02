@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect x="2" y="2" width="60" height="60" rx="14" ry="14" fill="#5A9E2F"/>
+  <g transform="translate(8, 12)">
+    <!-- Cargo body -->
+    <rect x="1" y="5" width="25" height="22" rx="2.5" fill="white"/>
+    <!-- Cab -->
+    <path d="M26,12 L26,27 L42,27 L42,20 L36,12 Z" fill="white"/>
+    <!-- Window -->
+    <path d="M29,14 L29,21 L37,21 L34,14 Z" fill="#5A9E2F" opacity="0.2"/>
+    <!-- Wheels -->
+    <circle cx="12" cy="31" r="5.5" fill="#3D7A1A" opacity="0.3"/>
+    <circle cx="12" cy="31" r="5.5" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="12" cy="31" r="2" fill="white"/>
+    <circle cx="35" cy="31" r="5.5" fill="#3D7A1A" opacity="0.3"/>
+    <circle cx="35" cy="31" r="5.5" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="35" cy="31" r="2" fill="white"/>
+  </g>
+</svg>
