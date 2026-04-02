@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   try {
     const data: ContactFormData = await request.json();
 
-    if (!data.name || !data.email || !data.phone || !data.from || !data.to) {
+    if (!data.name || !data.phone || !data.from || !data.to) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -49,7 +49,7 @@ ${data.notes ? `<p style="margin-top:16px;"><strong>Observações:</strong><br/>
         body: JSON.stringify({
           sender: { name: "123cheguei Website", email: toEmail },
           to: [{ email: toEmail, name: "123cheguei" }],
-          replyTo: { email: data.email, name: data.name },
+          ...(data.email ? { replyTo: { email: data.email, name: data.name } } : {}),
           subject: `Novo Orçamento: ${data.name} — ${data.from} → ${data.to}`,
           htmlContent: emailBody,
         }),
