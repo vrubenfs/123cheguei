@@ -44,7 +44,7 @@ export default function Hero() {
       <img
         src="/europe-map-opt.svg"
         alt=""
-        className="absolute right-[-10%] sm:right-[0%] top-[2%] w-[500px] sm:w-[700px] lg:w-[800px] h-auto opacity-[0.12] pointer-events-none select-none"
+        className="absolute right-[-5%] top-[0%] w-[550px] sm:w-[700px] lg:w-[900px] h-auto opacity-[0.15] pointer-events-none select-none"
         loading="lazy"
       />
 
