@@ -1,46 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" fill="none">
 <!-- Iceland -->
-<path d="M165 85 L190 78 L205 85 L200 98 L180 100 L168 95Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M165 85 L190 78 L205 85 L200 98 L180 100 L168 95Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Norway/Sweden -->
-<path d="M380 30 L395 25 L410 50 L415 80 L420 120 L410 160 L400 200 L385 210 L375 180 L370 140 L365 100 L370 60Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M380 30 L395 25 L410 50 L415 80 L420 120 L410 160 L400 200 L385 210 L375 180 L370 140 L365 100 L370 60Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Finland -->
-<path d="M430 60 L455 55 L465 80 L470 120 L465 160 L450 175 L435 160 L425 120 L420 80Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M430 60 L455 55 L465 80 L470 120 L465 160 L450 175 L435 160 L425 120 L420 80Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- UK -->
-<path d="M260 180 L280 170 L295 180 L300 200 L305 230 L295 250 L280 255 L270 240 L265 220 L258 200Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M260 180 L280 170 L295 180 L300 200 L305 230 L295 250 L280 255 L270 240 L265 220 L258 200Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Ireland -->
-<path d="M235 195 L255 190 L260 210 L255 230 L240 235 L232 220 L230 205Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M235 195 L255 190 L260 210 L255 230 L240 235 L232 220 L230 205Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- France -->
-<path d="M300 270 L340 255 L370 265 L380 290 L375 330 L355 355 L325 360 L300 345 L290 315 L295 290Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M300 270 L340 255 L370 265 L380 290 L375 330 L355 355 L325 360 L300 345 L290 315 L295 290Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Spain -->
-<path d="M250 370 L340 360 L355 370 L360 400 L350 440 L310 460 L270 455 L245 435 L235 400Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M250 370 L340 360 L355 370 L360 400 L350 440 L310 460 L270 455 L245 435 L235 400Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- PORTUGAL — GREEN -->
-<path d="M220 380 L248 370 L250 400 L248 435 L238 450 L225 445 L218 420 L215 395Z" fill="#5A9E2F" fill-opacity="0.5" stroke="#5A9E2F" stroke-width="2.5"/>
+<path d="M220 380 L248 370 L250 400 L248 435 L238 450 L225 445 L218 420 L215 395Z" fill="#5A9E2F" fill-opacity="0.7" stroke="#5A9E2F" stroke-width="2.5"/>
 <!-- Germany -->
-<path d="M355 220 L395 210 L415 225 L420 260 L405 280 L375 285 L355 270 L350 245Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M355 220 L395 210 L415 225 L420 260 L405 280 L375 285 L355 270 L350 245Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Poland -->
-<path d="M420 210 L470 200 L485 220 L480 260 L460 275 L430 270 L415 250Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M420 210 L470 200 L485 220 L480 260 L460 275 L430 270 L415 250Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Italy -->
-<path d="M385 295 L400 285 L410 310 L420 340 L425 370 L415 400 L405 395 L395 365 L388 335 L385 310Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M385 295 L400 285 L410 310 L420 340 L425 370 L415 400 L405 395 L395 365 L388 335 L385 310Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Balkans -->
-<path d="M435 290 L475 280 L490 305 L485 340 L470 360 L445 355 L430 335 L425 310Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M435 290 L475 280 L490 305 L485 340 L470 360 L445 355 L430 335 L425 310Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Greece -->
-<path d="M460 370 L480 360 L490 385 L485 410 L470 420 L455 410 L450 390Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M460 370 L480 360 L490 385 L485 410 L470 420 L455 410 L450 390Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Turkey -->
-<path d="M500 310 L560 300 L590 315 L585 340 L555 350 L520 345 L500 330Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M500 310 L560 300 L590 315 L585 340 L555 350 L520 345 L500 330Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Denmark -->
-<path d="M355 195 L370 188 L378 200 L372 215 L358 218Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M355 195 L370 188 L378 200 L372 215 L358 218Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Belgium/Netherlands -->
-<path d="M310 240 L335 235 L345 250 L340 262 L315 265Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M310 240 L335 235 L345 250 L340 262 L315 265Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Switzerland/Austria -->
-<path d="M350 285 L385 280 L395 295 L385 305 L350 300Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M350 285 L385 280 L395 295 L385 305 L350 300Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Czech/Slovakia -->
-<path d="M395 245 L430 240 L440 255 L430 268 L400 270Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M395 245 L430 240 L440 255 L430 268 L400 270Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Romania -->
-<path d="M475 270 L520 260 L535 280 L530 305 L505 315 L480 305Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M475 270 L520 260 L535 280 L530 305 L505 315 L480 305Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Ukraine -->
-<path d="M490 210 L560 195 L590 215 L585 255 L555 275 L510 270 L485 250Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M490 210 L560 195 L590 215 L585 255 L555 275 L510 270 L485 250Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Baltic states -->
-<path d="M445 155 L470 148 L478 170 L472 190 L450 195 L442 178Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M445 155 L470 148 L478 170 L472 190 L450 195 L442 178Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 <!-- Belarus -->
-<path d="M480 185 L530 178 L540 200 L535 225 L505 230 L485 220Z" stroke="white" stroke-width="1" opacity="0.4"/>
+<path d="M480 185 L530 178 L540 200 L535 225 L505 230 L485 220Z" stroke="white" stroke-width="1.5" opacity="0.8"/>
 </svg>
