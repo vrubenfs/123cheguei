@@ -9,10 +9,12 @@ import Footer from "@/components/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollEffects";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollTruck from "@/components/ScrollTruck";
+import LangUpdater from "@/components/LangUpdater";
 
 export default function Home() {
   return (
     <>
+      <LangUpdater />
       <ScrollProgress />
       <Header />
       <main>

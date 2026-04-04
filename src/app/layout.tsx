@@ -55,6 +55,14 @@ export const metadata: Metadata = {
     description:
       "Mudanças residenciais em Portugal e Europa. Serviço profissional, rápido e sem stress. Orçamento grátis!",
     url: "https://123cheguei.pt",
+    images: [
+      {
+        url: "https://123cheguei.pt/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "123cheguei - Mudanças e Transporte",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

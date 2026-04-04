@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1E3A5F"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#162d4a"/>
+    </linearGradient>
+  </defs>
+  <!-- Green accent bar -->
+  <rect x="80" y="200" width="6" height="120" rx="3" fill="#5A9E2F"/>
+  <!-- Text -->
+  <text x="110" y="250" font-family="Arial Black, Arial, sans-serif" font-size="64" font-weight="900" fill="white">123cheguei</text>
+  <text x="110" y="310" font-family="Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="4" fill="#5A9E2F" text-transform="uppercase">TRANSPORTE</text>
+  <!-- Tagline -->
+  <text x="110" y="400" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.7">Mudanças simples, rápidas e sem stress</text>
+  <!-- Phone -->
+  <text x="110" y="460" font-family="Arial, sans-serif" font-size="22" fill="#5A9E2F" font-weight="700">932 844 460</text>
+  <text x="310" y="460" font-family="Arial, sans-serif" font-size="22" fill="white" opacity="0.4">· 123cheguei.pt</text>
+  <!-- Truck icon area -->
+  <g transform="translate(850, 180)" opacity="0.15">
+    <rect x="0" y="20" width="200" height="140" rx="12" stroke="white" stroke-width="3" fill="none"/>
+    <path d="M200,60 L200,160 L300,160 L300,110 L260,60 Z" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="70" cy="175" r="28" stroke="white" stroke-width="3" fill="none"/>
+    <circle cx="250" cy="175" r="28" stroke="white" stroke-width="3" fill="none"/>
+  </g>
+</svg>
