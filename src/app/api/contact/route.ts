@@ -229,9 +229,9 @@ export async function POST(request: NextRequest) {
       await createNotionQuote(data);
     } catch (err) {
       console.error("Failed to save to Notion:", (err as Error).message);
-      // Fallback: log the request so it's not lost
-      console.log(
-        `FALLBACK QUOTE: ${data.name} | ${data.phone} | ${data.from} → ${data.to}`,
+      return NextResponse.json(
+        { error: "Failed to process request" },
+        { status: 500 },
       );
     }
 
